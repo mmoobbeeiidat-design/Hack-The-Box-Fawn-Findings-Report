@@ -85,8 +85,8 @@ While the identified issue carries a **High severity** risk score of 7.5, the re
 	The following sequence demonstrates the complete exploitation chain for the anonymous FTP vulnerability. First, a standard FTP connection was established to the target IP `10.129.76.197` using the username `anonymous` with an empty password. The server responded with `230 Login successful.`, confirming that unauthenticated access is permitted. Subsequently, a directory listing was performed to identify accessible files, revealing the presence of `flag.txt`. The file was successfully downloaded to the local system using the `get` command.
 
 
-	![[Pasted image 20260704005232.png|600]]
+![FTP Login Successful](Pasted%20image%2020260704005232.png)
 
 	Finally, the downloaded file was read locally using the `cat` command, confirming the extraction of the sensitive flag. This validates that the anonymous FTP misconfiguration directly leads to unauthorized data disclosure.
 
-	![[Pasted image 20260704005406.png|271]]
+![Flag Extraction](Pasted%20image%2020260704005406.png)
